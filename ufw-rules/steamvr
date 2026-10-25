@@ -1,0 +1,4 @@
+[SteamVR]
+title=SteamVR
+description=SteamVR client
+ports=27036,27037/tcp|27031,27036/udp|10400,10401/udp

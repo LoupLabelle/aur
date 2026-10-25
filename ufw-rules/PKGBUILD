@@ -1,0 +1,17 @@
+# Maintainer: Loup Labelle <https://github.com/LoupLabelle>
+
+pkgname=ufwrules
+pkgver=0.0.1
+pkgrel=1
+pkgdesc='misc application firewall rules for ufw'
+arch=('any')
+license=('none')
+depends=('ufw')
+optdepends=('steam: application rule')
+source=('steamvr')
+
+package() {
+  # cd $srcdir/$pkgname-$pkgver
+  install -Dm644 steamvr "$pkgdir/etc/ufw/applications.d/steamvr"
+}
+md5sums=('b58e3cca510d164d45ac4d5da565a143')

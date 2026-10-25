@@ -2,12 +2,23 @@
 
 PKGBUILD repository for AUR and personal packages
 
+Before using, install `makepkg.conf` from [dotfiles], and add the required key:
+```
+# pacman-key --add keyfile
+# pacman-key --lsign-key <keyid>
+```
+
+The key can be exported with
+```
+$ gpg --armour --export <keyid> keyfile
+```
+
 ## using makepkg
 
 Change to the directory where the `PKGBUILD` is saved and run the following command to build the package:
 
 ```bash
-makepkg
+makepkg --sign
 ```
 
 If required dependencies ar missing, _makepkg_ will issue a warning before failing.
