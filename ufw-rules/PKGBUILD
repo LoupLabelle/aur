@@ -1,17 +1,18 @@
 # Maintainer: Loup Labelle <https://github.com/LoupLabelle>
 
 pkgname=ufwrules
-pkgver=0.0.1
+pkgver=0.0.2
 pkgrel=1
 pkgdesc='misc application firewall rules for ufw'
 arch=('any')
 license=('none')
 depends=('ufw')
 optdepends=('steam: application rule')
-source=('steamvr')
+source=('ufwrules-gameservers' 'ufwrules-steam')
 
 package() {
   # cd $srcdir/$pkgname-$pkgver
-  install -Dm644 steamvr "$pkgdir/etc/ufw/applications.d/steamvr"
+  install -Dm644 ufwrules-* -t "$pkgdir/etc/ufw/applications.d"
 }
-md5sums=('b58e3cca510d164d45ac4d5da565a143')
+md5sums=('a27c5a0f246774914aa15c11a3594241'
+         '724ad02efdf78abb32ab40d931928de1')

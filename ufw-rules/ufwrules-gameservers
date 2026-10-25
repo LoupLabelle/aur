@@ -1,0 +1,4 @@
+[vrising]
+title=VRising
+description=VRising Dedicated Server
+ports=9876:9877/udp
